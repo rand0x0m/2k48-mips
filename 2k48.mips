@@ -1,20 +1,4 @@
-.macro exit
-	addi $v0, $zero, 10
-	syscall
-.end_macro
-
-###########################################################################################################
-
-	.globl main
-
 	.text
-
-main :
-	addi $a0, $zero, 544
-	jal slide
-	sw   $v0, 0($sp)
-	exit
-
 
 # slide ($a0. $a1, $a2)
 #	return ($v0, $v1, $k0)
